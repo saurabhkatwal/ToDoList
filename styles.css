@@ -1,0 +1,32 @@
+label{
+    position: relative;
+    color: #000;
+}
+input[type=checkbox]+label::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.4s ease;
+    background-color: #ccc;
+}
+input[type=checkbox]:checked+label::before{
+    width: 100%;
+}
+input[type=checkbox]:checked+label{
+    color: #ccc;
+}
+a{
+    cursor:pointer;
+}
+a.active{
+    border:1px solid #ccc;
+}
+.active-container{
+    display: none;
+}
+.completed-container{
+    display: none;
+}
