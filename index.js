@@ -2,6 +2,9 @@ const form = document.querySelector("form");
 const input = document.querySelector("#in-text");
 form.addEventListener('submit', () => {
     event.preventDefault();
+    if(input.value.trim()===''){
+        return false;
+    }
     let localItems = JSON.parse(localStorage.getItem("localItem"));
     if (localItems === null) {
         taskList = [];
